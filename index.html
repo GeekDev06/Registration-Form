@@ -3,64 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration From</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Registration Form</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4B0082, #6A5ACD, #8A2BE2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        /* Form Styling */
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 350px;
+            position: relative;
+            top: 50px;
+            opacity: 0;
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        /* Form Transition Animation */
+        @keyframes slideUp {
+            from {
+                top: 80px;
+                opacity: 0;
+            }
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 1px solid white;
+            width: 80%;
+        }
+
+        /* Input Styling */
+        input, textarea, select {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            transition: 0.3s ease-in-out;
+            font-size: 14px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        textarea, select {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus, textarea:focus, select:focus {
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Button Styling */
+        input[type="submit"], input[type="reset"] {
+            background: white;
+            color: #4B0082;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background: #6A5ACD;
+            color: white;
+        }
+
+        /* Checkbox & Radio Buttons */
+        input[type="radio"], input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 5px;
+        }
+
+    </style>
 </head>
 <body>
     <form>
         <h1>Registration Form</h1>
         <hr>
-        First name:
-        <input type="text">
-        <br>
-        <br>
-        Last Name:
-        <input type="text">
-        <br>
-        <br>
-        Email:
-        <input type="email">
-        <br>
-        <br>
-        Password:
-        <input type="password">
-        <br>
-        <br>
-        Address:
-        <br>
+        <label>First Name:</label>
+        <input type="text" placeholder="Enter your first name">
+        <br><br>
+        
+        <label>Last Name:</label>
+        <input type="text" placeholder="Enter your last name">
+        <br><br>
 
-        <textarea cols="20" rows="4">
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email">
+        <br><br>
 
-        </textarea>
-        <br>
-        <br>
-        Gender:
-        <br>
-        <br>
-        <input type="radio" name="gender">Male
-        <input type="radio" name="gender">Female
-        <br>
-        <br>
+        <label>Password:</label>
+        <input type="password" placeholder="Enter password">
+        <br><br>
+
+        <label>Address:</label>
+        <textarea cols="20" rows="4" placeholder="Enter your address"></textarea>
+        <br><br>
+
+        <label>Gender:</label>
+        <br><br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <br><br>
+
+        <label>Education:</label>
         <select>
-            <option disabled>Education</option>
-            <option>B.tech</option>
+            <option disabled selected>Choose an option</option>
+            <option>B.Tech</option>
             <option>MBA</option>
             <option>MBBS</option>
         </select>
+        <br><br>
 
-        <br>
-        <br>
+        <input type="checkbox"> I accept the terms and conditions
+        <br><br>
 
-        <input type="checkbox">I accept the terms and conditions
-        <br>
-        <br>
         <input type="reset" value="Reset">
         <input type="submit" value="Submit">
-    
     </form>
-    
 </body>
 </html>
