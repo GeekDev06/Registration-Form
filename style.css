@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #3A007D, #6A0DAD, #8E2DE2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+/* Form Container */
+.container {
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 5;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid white;
+    width: 80%;
+}
+
+/* Form Inputs */
+input, textarea, select {
+    width: 90%;
+    padding: 12px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus, textarea:focus, select:focus {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    width: 45%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-submit {
+    background: white;
+    color: #6A0DAD;
+}
+
+.btn-submit:hover {
+    background: #6A0DAD;
+    color: white;
+}
+
+.btn-reset {
+    background: #ddd;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background: #bbb;
+}
