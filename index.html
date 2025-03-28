@@ -3,67 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration From</title>
-
-    <link rel="stylesheet" href="style.css">
-    
-    
+    <title>Registration Form</title>
+    <style>
+        
+        
+    </style>
 </head>
 <body>
-    <form>
-        <h1>Registration Form</h1>
+    <div class="navbar">Registration Form</div>
+
+    <div class="container">
+        <h1>Sign Up</h1>
         <hr>
-        First name:
-        <input type="text">
-        <br>
-        <br>
-        Last Name:
+        <form>
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter your first name">
+            <br>
+            
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter your last name">
+            <br>
 
-        <input type="text">
-        <br>
-        <br>
-        Email:
-        <input type="email">
-        <br>
-        <br>
-        Password:
-        <input type="password">
-        <br>
-        <br>
-        Address:
-        <br>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+            <br>
 
-        <textarea cols="20" rows="4">
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password">
+            <br>
 
-        </textarea>
-        <br>
-        <br>
-        Gender:
-        <br>
-        <br>
-        <input type="radio" name="gender">Male
-        <input type="radio" name="gender">Female
-        <br>
-        <br>
-        <select>
-            <option disabled>Education</option>
-            <option>B.tech</option>
-            <option>MBA</option>
-            <option>MBBS</option>
-        </select>
+            <label>Address:</label>
+            <textarea placeholder="Enter your address"></textarea>
+            <br>
 
-        <br>
-        <br>
+            <label>Gender:</label>
+            <br>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <br>
 
-        <input type="checkbox">I accept the terms and conditions
-        <br>
-        <br>
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit">
-    
-    </form>
-    
+            <label>Education:</label>
+            <select>
+                <option disabled selected>Choose an option</option>
+                <option>B.Tech</option>
+                <option>MBA</option>
+                <option>MBBS</option>
+            </select>
+            <br>
+
+            <input type="checkbox"> I accept the terms and conditions
+            <br>
+
+            <button type="reset" class="btn btn-reset">Reset</button>
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
-
-
